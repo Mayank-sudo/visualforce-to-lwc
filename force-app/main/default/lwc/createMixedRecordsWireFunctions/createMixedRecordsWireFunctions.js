@@ -13,7 +13,9 @@ import OPPORTUNITY_CLOSEDATE_FIELD from '@salesforce/schema/Opportunity.CloseDat
 export default class CreateMixedRecordsWireFunctions extends LightningElement {
     contactFirstName = 'Yan';
     contactLastName = 'Khang';
+    contactPhone =  9192939495;
     opportunityName = 'Possible deal';
+    
 
     handleContactFirstNameInputChange(event) {
         this.contactFirstName = event.target.value;
@@ -23,9 +25,14 @@ export default class CreateMixedRecordsWireFunctions extends LightningElement {
         this.contactLastName = event.target.value;
     }
 
+    handleContactPhoneInputChange(event) {
+         this.contactPhone = event.target.value;
+    }
+
     handleOpportunityNameInputChange(event) {
         this.opportunityName = event.target.value;
     }
+    
 
     handleButtonClick() {
         this.createContact();
@@ -41,7 +48,9 @@ export default class CreateMixedRecordsWireFunctions extends LightningElement {
             apiName: CONTACT_OBJECT.objectApiName,
             fields: {
                 [CONTACT_FIRST_NAME_FIELD.fieldApiName]: this.contactFirstName,
-                [CONTACT_LAST_NAME_FIELD.fieldApiName]: this.contactLastName
+                [CONTACT_LAST_NAME_FIELD.fieldApiName]: this.contactLastName,
+                [CONTACT_LAST_NAME_FIELD.phoneApiName]: this.contactPhone,
+                [CONTACT_ID.fiedlApiId]: this.contactId
             }
         };
 
@@ -60,7 +69,9 @@ export default class CreateMixedRecordsWireFunctions extends LightningElement {
             fields: {
                 [OPPORTUNITY_NAME_FIELD.fieldApiName]: this.opportunityName,
                 [OPPORTUNITY_STAGENAME_FIELD.fieldApiName]: 'Prospecting',
-                [OPPORTUNITY_CLOSEDATE_FIELD.fieldApiName]: new Date(2025, 1, 1)
+                [OPPORTUNITY_CLOSEDATE_FIELD.fieldApiName]: new Date(2025, 1, 1),
+                [OPPORTUNITY_TYPE_FIELD.fieldApiField]:  'Phone Enquiry'
+                
             }
         };
 
