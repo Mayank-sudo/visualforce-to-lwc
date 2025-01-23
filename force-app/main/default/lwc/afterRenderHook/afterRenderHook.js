@@ -6,7 +6,7 @@ export default class AfterRenderHook extends LightningElement {
 
     renderedCallback() {
         if (!this.rendered) {
-            this.courses = ['Irrigation Systems', 'Soils', 'Organic Crops'];
+            this.courses = ['Fruit Corporation', 'Fruits', 'Mango'];
             this.rendered = true;
         }
     }
