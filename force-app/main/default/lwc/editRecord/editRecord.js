@@ -15,7 +15,8 @@ export default class EditRecord extends LightningElement {
         ACCOUNT_NAME_FIELD,
         ACCOUNT_TYPE_FIELD,
         ACCOUNT_PHONE_FIELD,
-        ACCOUNT_EMPLOYEES_FIELD
+        ACCOUNT_EMPLOYEES_FIELD,
+        ACCOUNT_ACCOUNTNUMBER_FIELD
     ];
 
     // Only use if custom behavior needed
