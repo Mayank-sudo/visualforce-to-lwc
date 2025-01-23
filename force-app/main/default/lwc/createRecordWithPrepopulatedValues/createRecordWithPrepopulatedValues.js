@@ -10,6 +10,7 @@ export default class CreateRecordWithPrepopulatedValues extends LightningElement
     objectApiName = ACCOUNT_OBJECT;
     nameField = ACCOUNT_NAME_FIELD;
     typeField = ACCOUNT_TYPE_FIELD;
+    typeAnnual =  Account_ANNUAL_REVENUE;
     phoneField = ACCOUNT_PHONE_FIELD;
     employeesField = ACCOUNT_EMPLOYEES_FIELD;
 
